@@ -1,0 +1,101 @@
+/* Solutions dropdown menu */
+.main-nav .has-dropdown { position: relative; }
+
+.main-nav .dropdown-parent {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: 0;
+  padding: 0.25rem;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+.dropdown-toggle svg { transition: transform 0.2s ease; }
+.has-dropdown.open .dropdown-toggle svg { transform: rotate(180deg); }
+
+.dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 520px;
+  display: grid;
+  grid-template-rows: repeat(5, auto);   /* 5 items per column */
+  grid-auto-flow: column;                /* fills column 1, then column 2 */
+  grid-auto-columns: 1fr;
+  column-gap: 0.5rem;
+  background: #fff;
+  border-radius: 6px;
+  border-top: 3px solid #2e598a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.dropdown-menu li { display: block; margin: 0; }
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: #1f2a37;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background: #f1f8f3;
+  color: #2e598a;
+}
+.dropdown-menu a.active {
+  color: #2e598a;
+  font-weight: 700;
+}
+
+/* Open on click/tap, keyboard focus, or mouse hover (desktop) */
+.has-dropdown.open .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+@media (hover: hover) {
+  .has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile: menu expands inline inside the slide-down nav */
+@media (max-width: 900px) {
+  .dropdown-menu {
+    position: static;
+    width: auto;
+    min-width: 0;
+    box-shadow: none;
+    border-top: 0;
+    border-radius: 0;
+    padding: 0 0 0 1rem;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .has-dropdown.open .dropdown-menu { display: block; }
+  .has-dropdown:focus-within:not(.open) .dropdown-menu { display: none; }
+  .dropdown-menu a { white-space: normal; }
+}

@@ -22,7 +22,26 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="solutions.html" class="active">Solutions</a></li>
+        <li class="has-dropdown">
+          <div class="dropdown-parent">
+            <a href="solutions.html" class="active">Solutions</a>
+            <button class="dropdown-toggle" aria-label="Show solutions menu" aria-expanded="false" aria-controls="solutionsMenu">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <ul class="dropdown-menu" id="solutionsMenu">
+            <li><a href="solutions.html" class="active">Compressor Revamp</a></li>
+            <li><a href="solutions-compressor-repair.html">Compressor Repair</a></li>
+            <li><a href="solutions-impeller-design.html">Impeller Design</a></li>
+            <li><a href="solutions-rotordynamics.html">Rotordynamic Analysis</a></li>
+            <li><a href="solutions-performance-testing.html">Performance Testing</a></li>
+            <li><a href="solutions-aftermarket-parts.html">Aftermarket Parts</a></li>
+            <li><a href="solutions-field-services.html">Field Services</a></li>
+            <li><a href="solutions-condition-monitoring.html">Condition Monitoring</a></li>
+            <li><a href="solutions-engineering-studies.html">Engineering Studies</a></li>
+            <li><a href="solutions-rerates-upgrades.html">Rerates &amp; Upgrades</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#about">About Us</a></li>
         <li><a href="index.html#insights">Insights</a></li>
         <li><a href="index.html#careers">Careers</a></li>
@@ -298,5 +317,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="solutions-dropdown.js"></script>
 </body>
 </html>
