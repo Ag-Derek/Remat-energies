@@ -752,7 +752,45 @@ section.section{ padding: 4.5rem 0; }
 .ph-impeller-macro{ background: radial-gradient(circle at 40% 35%, #f2f3f2, #b7c0c6 50%, #5c6870); min-height: 340px; }
 .ph-test-lab{ background: linear-gradient(135deg,#1c2530,#465b6e 45%,#8fa0ab); min-height: 340px; }
 .ph-cnc-machining{ background: linear-gradient(135deg,#2c343c,#5a7186 45%,#c9822f); min-height: 340px; }
-.center-on-desktop 
+.center-on-desktop{ text-align:center; }
+
+/* ============================================================
+   Stats band (cream, big numbers)
+   ============================================================ */
+.stats-band{ background: var(--cream); padding: 3.5rem 0; }
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align:center;
+}
+.stat-number{ font-family: var(--serif-head); font-size: 2.4rem; font-weight:700; color: var(--navy-text); }
+.stat-label{ font-size: 0.88rem; color: var(--body-text); margin-top: 0.3rem; }
+
+/* Checklist (bulleted feature lists) */
+.check-list{ list-style:none; margin: 1.1rem 0; padding:0; }
+.check-list li{ position:relative; padding-left: 1.7rem; margin-bottom: 0.7rem; }
+.check-list li::before{ content:"\2713"; position:absolute; left:0; top:0; color:#4caf6b; font-weight:700; }
+.check-list li strong{ display:block; }
+
+/* Navy content section with light text (reuses two-col / col-text layout) */
+.section-navy{ background: var(--navy); }
+.section-navy h2, .section-navy h3{ color: var(--white); }
+.section-navy p, .section-navy li{ color: rgba(255,255,255,0.85); }
+.section-navy li strong{ color: var(--white); }
+
+/* Simple data table */
+.info-table-wrap{ overflow-x:auto; margin-top: 2rem; }
+.info-table{ width:100%; border-collapse:collapse; font-size: 0.92rem; }
+.info-table th, .info-table td{ text-align:left; padding: 0.7rem 1rem; border-bottom: 1px solid #e2e2da; }
+.info-table th{ color: var(--navy-text); font-family: var(--serif-head); }
+
+@media (max-width: 900px){
+  .stats-grid{ grid-template-columns: repeat(2,1fr); gap: 2rem 1.2rem; }
+}
+@media (max-width: 700px){
+  .stats-grid{ grid-template-columns: 1fr 1fr; }
+}
 
 /* Icon feature band (dark navy, green line icons) */
 .icon-band{ background: var(--navy); padding: 4.5rem 0; }
@@ -763,6 +801,7 @@ section.section{ padding: 4.5rem 0; }
   margin-top: 2.5rem;
   text-align:center;
 }
+.icon-feature-grid.cols-3{ grid-template-columns: repeat(3, 1fr); }
 .icon-feature-mark{ display:inline-flex; margin-bottom: 1rem; }
 .icon-feature h3{ color: var(--white); font-size: 1.05rem; margin:0; }
 
@@ -835,7 +874,7 @@ section.section{ padding: 4.5rem 0; }
   gap: 0 0.5rem;
   background: #fff;
   border-radius: 6px;
-  border-top: 3px solid #4caf6b;
+  border-top: 3px solid var(--blue-accent);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   opacity: 0;
@@ -858,11 +897,11 @@ section.section{ padding: 4.5rem 0; }
 }
 .main-nav .dropdown-menu a:hover,
 .main-nav .dropdown-menu a:focus-visible{
-  background: #f1f8f3;
-  color: #2e8a4d;
+  background: #eef4fa;
+  color: var(--blue-accent);
 }
 .main-nav .dropdown-menu a.active{
-  color: #2e8a4d;
+  color: var(--navy-text);
   font-weight: 700;
   border-bottom: 0;
 }
@@ -874,12 +913,10 @@ section.section{ padding: 4.5rem 0; }
   visibility: visible;
   transform: translateY(0);
 }
-@media (hover: hover){
-  .has-dropdown:hover .dropdown-menu{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+.has-dropdown:hover .dropdown-menu{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* Mobile: menu expands inline inside the slide-down nav (same 700px breakpoint as the nav) */
