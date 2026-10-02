@@ -950,3 +950,220 @@ section.section{ padding: 4.5rem 0; }
   /* give the slide-down nav room when the dropdown is open */
   .main-nav.open:has(.has-dropdown.open){ max-height: 900px; }
 }
+
+
+/* ============================================================
+   Waukesha Engines solutions page additions
+   ============================================================ */
+
+/* Placeholder images (Waukesha orange engine tones) */
+.ph-waukesha-hero{ background: radial-gradient(ellipse at 55% 55%, #e8662a 0%, #c4471a 30%, transparent 58%), linear-gradient(120deg,#cfd3d6,#dfe2e4 50%,#c9cdd0); }
+.ph-waukesha-plant{ background: linear-gradient(135deg,#2a3036,#c4471a 45%,#3fa36b 75%,#9aa3aa); }
+.ph-waukesha-field{ background: linear-gradient(135deg,#8a7558,#d9502a 50%,#1c2b3a); }
+.ph-waukesha-overhaul{ background: linear-gradient(160deg,#b9bec2,#d9502a 45%,#4a6b55 75%,#5c6268); }
+.ph-waukesha-apm{ background: linear-gradient(160deg,#3a4048,#a9c0f0 30%,#c9d6f7 70%,#6b5238); }
+.ph-waukesha-engine{ background: radial-gradient(ellipse at 50% 50%, #f07a32 0%, #d4561f 40%, #ffffff 72%); }
+.ph-waukesha-facility{ background: linear-gradient(160deg,#c49a6c,#2a2d30 35%,#3c4248 75%,#5a6a3e); }
+.ph-waukesha-install{ background: linear-gradient(135deg,#6b6553,#b7ad8f 40%,#e2621f 60%,#8a8c7c); }
+.ph-waukesha-training{ background: linear-gradient(135deg,#c9c3b6,#8e959b 45%,#e8c43a 70%,#5a5f66); }
+
+/* Spare parts tiles (cream, 4 columns) */
+.parts-intro{ max-width: 980px; margin: 0 auto; }
+.parts-tile-grid{
+  list-style:none;
+  margin: 2.5rem 0 0;
+  padding:0;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+.parts-tile-grid li{
+  background: var(--cream);
+  color: var(--navy-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align:center;
+  padding: 1.2rem 1rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 70px;
+}
+
+/* Bulleted list with bold inline lead-in */
+.lead-list{ margin: 0 0 1rem; padding-left: 1.4rem; }
+.lead-list li{ margin-bottom: 0.6rem; }
+.lead-list li strong{ color: var(--navy-text); }
+
+/* Why choose tiles (alternating navy / cream, rounded) */
+.why-tile-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.why-tile{
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 1.8rem 1.6rem 2rem;
+  text-align:center;
+}
+.why-tile h3{ font-size: 1.3rem; margin-bottom: 0.7rem; }
+.why-tile p{ font-size: 0.95rem; margin:0; }
+.why-tile-navy{ background: var(--navy); }
+.why-tile-navy h3{ color: var(--white); }
+.why-tile-navy p{ color: rgba(255,255,255,0.88); }
+
+@media (max-width: 900px){
+  .parts-tile-grid{ grid-template-columns: repeat(2, 1fr); }
+  .why-tile-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px){
+  .why-tile-grid{ grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
+   Filtration & Separation solutions page additions
+   ============================================================ */
+
+/* Placeholder images (stainless / workshop tones) */
+.ph-filter-hero{ background: linear-gradient(120deg,#5a6168,#9aa3aa 35%,#c9ced2 60%,#e2c25a 78%,#7d858c); }
+.ph-filter-skids{ background: linear-gradient(135deg,#6b7076,#b9bfc4 40%,#c94a3a 62%,#e8c64a 75%,#c9a272); }
+.ph-filter-steel{ background: linear-gradient(135deg,#e6e8ea,#b8bfc5 45%,#7d878f); }
+.ph-filter-green{ background: linear-gradient(135deg,#2a3a32,#2f9a63 45%,#9fd2b4 75%,#c9cfd3); }
+.ph-filter-workshop{ background: linear-gradient(135deg,#5c646b,#aab3b9 40%,#d8dcdf 65%,#c9a46a); }
+.ph-filter-orange{ background: linear-gradient(135deg,#5c646b,#d9792a 45%,#f0b064 70%,#b8bfc5); }
+.ph-filter-drawing{ background: linear-gradient(135deg,#ffffff,#e9ecef 40%,#b5651d 60%,#3d6b4a 80%,#ffffff); }
+.ph-filter-panel{ background: linear-gradient(135deg,#f1f2f3,#c9ced2 45%,#3f5f8a 70%,#e8ecef); }
+.ph-filter-vessel{ background: linear-gradient(135deg,#6b4a2e,#c9ced2 40%,#eef0f2 60%,#e8c64a 80%); }
+.ph-filter-facility{ background: linear-gradient(180deg,#6fa9d6 0%,#cfe0ee 45%,#f2f3f4 60%,#9aa3aa 100%); }
+.ph-filter-flush{ background: linear-gradient(135deg,#5c7d9a,#b8bfc5 45%,#e6e8ea 70%,#6b7076); }
+.ph-filter-water{ background: linear-gradient(135deg,#1f4f8a,#3f86d1 45%,#a9cff0 75%,#d8dcdf); }
+.ph-filter-yellow{ background: linear-gradient(135deg,#5c646b,#e8e03a 45%,#f5ef8a 65%,#9aa3aa); }
+.ph-filter-banner{ position:absolute; inset:0; background: linear-gradient(115deg,#c9a46a,#aab3b9 30%,#d8dcdf 55%,#5c7d9a 75%,#3a4650); }
+
+/* Product cards (white cards on navy; cream cards on white with .on-light) */
+.product-card-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3rem;
+  margin-top: 2.5rem;
+}
+.product-card-grid.cols-3{ grid-template-columns: repeat(3, 1fr); gap: 2.5rem 2rem; }
+.product-card-grid.cols-4{ grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.product-card{
+  background: var(--white);
+  padding: 1.6rem 1.6rem 2rem;
+  text-align:center;
+}
+.product-card .ph{ aspect-ratio: 3/2; border-radius: 0; margin-bottom: 1.4rem; }
+.product-card h3{ font-size: 1.2rem; color: var(--navy-text); margin-bottom: 0.8rem; }
+.product-card p{ font-size: 0.92rem; color: var(--body-text); margin:0; }
+.product-card-grid.cols-4 .product-card{ padding: 1.1rem 1.1rem 1.6rem; }
+.product-card-grid.cols-4 .product-card h3{ font-size: 1.1rem; }
+.section-navy .product-card h3{ color: var(--navy-text); }
+.section-navy .product-card p{ color: var(--body-text); }
+.product-card-grid.on-light .product-card{ background: var(--cream); }
+
+/* ISO 4406 cleanliness tiles (reuses .why-tile) */
+.cleanliness-heading{ margin-top: 3rem; font-size: 1.4rem; }
+.spec-list{ list-style:none; margin:0; padding:0; }
+.spec-list li{ font-size: 0.92rem; margin-bottom: 0.6rem; }
+.spec-list li strong{ color: var(--navy-text); }
+.why-tile-navy .spec-list li{ color: rgba(255,255,255,0.88); }
+.why-tile-navy .spec-list li strong{ color: var(--white); }
+
+/* Standards / certifications carousel */
+.badge-carousel{
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  align-items:center;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+.carousel-track{
+  display:flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0.5rem 0.2rem;
+}
+.carousel-track::-webkit-scrollbar{ display:none; }
+.cert-badge{
+  flex: 0 0 calc((100% - 4.5rem) / 4);
+  min-width: 160px;
+  scroll-snap-align: start;
+  border: 1px solid #e2e2da;
+  border-radius: var(--radius);
+  padding: 1.4rem 1rem;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+.cert-badge-title{ font-family: var(--serif-head); font-weight:700; font-size: 1.3rem; color: var(--navy-text); }
+.carousel-btn{
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--steel);
+  color: var(--white);
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  transition: background-color .2s ease, opacity .2s ease;
+}
+.carousel-btn:hover{ background: var(--navy); }
+.carousel-btn:disabled{ opacity: 0.35; cursor: default; background: var(--steel); }
+
+@media (max-width: 900px){
+  .product-card-grid.cols-3, .product-card-grid.cols-4{ grid-template-columns: repeat(2, 1fr); }
+  .cert-badge{ flex-basis: calc((100% - 1.5rem) / 2); }
+}
+@media (max-width: 700px){
+  .product-card-grid, .product-card-grid.cols-3, .product-card-grid.cols-4{ grid-template-columns: 1fr; }
+  .badge-carousel{ gap: 0.6rem; }
+  .carousel-btn{ width: 40px; height: 40px; }
+  .cert-badge{ flex-basis: 100%; }
+}
+
+
+/* ============================================================
+   Field Rental solutions page additions
+   ============================================================ */
+
+/* Placeholder images */
+.ph-rental-hero{ background: linear-gradient(120deg,#2a2d30,#5a6168 35%,#c94a3a 55%,#8b9096 75%,#3a4046); }
+.ph-rental-alignment{ background: linear-gradient(135deg,#1f3f7a,#3f6fb0 40%,#8fa3b5 65%,#5a6168); }
+/* Product cut-out shots on a soft light backdrop */
+.ph-product{ background-color: transparent; min-height: 300px; }
+.ph-rental-radio{ background: radial-gradient(ellipse at 50% 55%, #2a2d30 0%, #4a4f55 22%, transparent 48%); }
+.ph-rental-tracker{ background: radial-gradient(ellipse at 50% 50%, #e6e8ea 0%, #b8bfc5 22%, #2f4fa0 38%, transparent 55%); }
+.ph-rental-torque{ background: radial-gradient(ellipse at 50% 50%, #f2d43a 0%, #c9a42a 22%, #9aa3aa 38%, transparent 58%); }
+.ph-rental-boroscope{ background: radial-gradient(ellipse at 55% 50%, #2a2d30 0%, #3f8a9a 22%, #5a6168 34%, transparent 52%); }
+
+/* Large intro lead-in text */
+.intro-lead{
+  font-family: var(--serif-head);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--navy-text);
+}
+
+/* Icon band features with a description line */
+.icon-feature p{ color: rgba(255,255,255,0.85); font-size: 0.92rem; margin: 0.7rem 0 0; }
+
+/* Plain feature lines (no bullets) and sub-headings inside text columns */
+.plain-list{ list-style:none; margin: 0 0 1.2rem; padding:0; }
+.plain-list li{ margin-bottom: 0.5rem; }
+.col-text h3{ margin-top: 1.6rem; }
+.col-text h3:first-child{ margin-top: 0; }
+.col-text .lead-list + div{ margin-top: 1.6rem; }
+
+/* Sector cards: image + title only */
+.sector-cards .product-card{ padding: 1.1rem 1.1rem 1.4rem; }
+.sector-cards .product-card .ph{ margin-bottom: 1rem; }
+.sector-cards .product-card h3{ margin: 0; font-size: 1.2rem; }
