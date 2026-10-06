@@ -287,6 +287,9 @@ section.section{ padding: 4.5rem 0; }
   display:inline-block;
 }
 .solution-row .ph{ min-height: 300px; }
+.solution-row h3 a{ color: inherit; text-decoration: inherit; }
+.solution-row h3 a:hover{ color: var(--steel); }
+.solution-row .col-media a{ display:block; }
 
 .ph-compressor{ background: linear-gradient(120deg,#dfe6ea,#aebac3 45%,#5c6b78); }
 .ph-turnaround{ background: linear-gradient(135deg,#2b2318,#7a5a2e 45%,#c99a4c); }
@@ -1167,3 +1170,47 @@ section.section{ padding: 4.5rem 0; }
 .sector-cards .product-card{ padding: 1.1rem 1.1rem 1.4rem; }
 .sector-cards .product-card .ph{ margin-bottom: 1rem; }
 .sector-cards .product-card h3{ margin: 0; font-size: 1.2rem; }
+
+
+/* ============================================================
+   Balance of Plant solutions page additions
+   ============================================================ */
+
+/* Placeholder images */
+.ph-bop-hero{ background: linear-gradient(120deg,#2f6fb0,#8fb8de 30%,#e8c43a 50%,#9aa3aa 70%,#5a6168); }
+.ph-bop-coolers{ background: linear-gradient(135deg,#2a3036,#6b7680 45%,#c9ced2); }
+.ph-bop-separators{ background: linear-gradient(135deg,#6fa9d6,#cfd6dc 45%,#2f4fa0 80%); }
+.ph-bop-air{ background: linear-gradient(160deg,#6fa9d6,#e6e8ea 45%,#c94a3a 75%,#5a6168); }
+.ph-bop-lube{ background: linear-gradient(135deg,#9aa3aa,#d8dcdf 45%,#e8c43a 75%,#6b7076); }
+.ph-bop-seal{ background: linear-gradient(135deg,#3a4046,#8b9096 45%,#d8dcdf 75%,#c94a3a); }
+.ph-bop-fuelgas{ background: linear-gradient(160deg,#cfe0ee,#b8bfc5 40%,#e6e8ea 65%,#6b7076); }
+.ph-bop-conditioning{ background: linear-gradient(135deg,#2a3036,#6b7680 40%,#c9ced2 65%,#3f5f8a); }
+.ph-bop-fire{ background: linear-gradient(135deg,#8a1f1a,#d9402a 40%,#e6e8ea 65%,#2f6fb0); }
+.ph-bop-ic{ background: linear-gradient(135deg,#5a6168,#b8bfc5 45%,#e6e8ea 75%,#8b9096); }
+.ph-bop-inverters{ background: linear-gradient(135deg,#e6e8ea,#c9ced2 40%,#3a4650 55%,#eef0f2); }
+.ph-bop-transformers{ background: linear-gradient(160deg,#6fa9d6,#cfe0ee 35%,#5a6168 65%,#2a3036); }
+.ph-bop-switchgear{ background: linear-gradient(135deg,#eef0f2,#c9ced2 40%,#e8e03a 60%,#c94a3a 80%); }
+.ph-bop-night-plant{ background: linear-gradient(160deg,#0b1626,#1c3a5e 40%,#e8a13c 65%,#f7d98a 80%,#1c2b3a); }
+.ph-bop-refinery{ background: linear-gradient(160deg,#6fa9d6,#cfe0ee 40%,#b8bfc5 60%,#5a6168); }
+
+
+/* ============================================================
+   Decarbonization solutions page additions
+   ============================================================ */
+
+/* Placeholder images */
+.ph-dc-hero{ background: linear-gradient(120deg,#3f7a3a,#8fb8de 30%,#cfe0ee 50%,#9aa3aa 70%,#5a6168); }
+.ph-dc-video{ background: linear-gradient(160deg,#5a6168,#c9ced2 35%,#eef0f2 55%,#6b7680 80%,#2a3036); }
+.ph-dc-impeller{ background: radial-gradient(circle at 40% 35%, #f2f3f2, #b7c0c6 50%, #5c6870); }
+.ph-dc-lab{ background: linear-gradient(135deg,#c9ced2,#e8c43a 30%,#2f6fb0 60%,#5a6168); }
+.ph-dc-banner{ position:absolute; inset:0; background: linear-gradient(180deg,#6fa9d6 0%,#cfe0ee 30%,#5f7a4a 55%,#6b7076 80%,#3a4046 100%); }
+
+/* Modernization solutions page placeholders */
+.ph-mod-hero{ background: linear-gradient(120deg,#e8c43a,#9aa3aa 25%,#d8dcdf 50%,#8b9096 75%,#3a4046); }
+.ph-mod-rotor{ background: linear-gradient(135deg,#2f4fa0,#6fa9d6 30%,#b0244a 55%,#c9ced2 80%); }
+.ph-mod-turbine-hall{ background: linear-gradient(135deg,#3a4650,#2f6fb0 40%,#c9ced2 65%,#e8c43a 85%); }
+.ph-mod-plant-floor{ background: linear-gradient(160deg,#1c2b3a,#2f6fb0 40%,#8b9096 65%,#3a4046); }
+.ph-mod-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#2a2018,#a9783a 30%,#e8c47a 50%,#6b5238 75%,#1c1410); }
+
+/* Banner call-to-action under centered text */
+.banner-cta{ margin-top: 1.6rem; text-align:center; }
