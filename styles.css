@@ -1214,3 +1214,61 @@ section.section{ padding: 4.5rem 0; }
 
 /* Banner call-to-action under centered text */
 .banner-cta{ margin-top: 1.6rem; text-align:center; }
+
+
+/* ============================================================
+   Gas Turbines services page additions
+   ============================================================ */
+
+/* Placeholder images (turbine steel / yellow crane tones) */
+.ph-gt-hero{ background: linear-gradient(120deg,#e8c43a,#c9a42a 20%,#8b9096 45%,#c9ced2 65%,#3a4650); }
+.ph-gt-package{ background: linear-gradient(135deg,#e8e03a,#c9ced2 30%,#9aa3aa 55%,#6b7076 80%,#3a4046); }
+.ph-gt-rotor{ background: radial-gradient(circle at 65% 50%, #eef0f2, #b8bfc5 35%, #5a6168 60%, #2a4a5a); }
+.ph-gt-field{ background: linear-gradient(135deg,#c9a272,#8a5a2e 35%,#5a6168 60%,#2f6fd6 85%); }
+.ph-gt-piping{ background: linear-gradient(135deg,#2a3036,#8a7558 35%,#c94a3a 55%,#2f6fd6 80%); }
+.ph-gt-technician{ background: linear-gradient(135deg,#c96a2a,#e8c43a 25%,#c9ced2 55%,#3f6fb0 80%); }
+.ph-gt-intake{ background: radial-gradient(circle at 50% 50%, #8b9096 0%, #3a4650 30%, #1c2530 60%, #0b1220 100%); }
+.ph-gt-plant{ background: linear-gradient(180deg,#2f7fd6 0%,#8fb8de 40%,#3a4046 65%,#e8862a 85%,#2a2018 100%); }
+
+/* Two images stacked in one media column */
+.media-stack{ display:grid; gap: 2rem; }
+.col-media.media-stack .ph{ aspect-ratio: 1/1; min-height: 0; }
+
+/* Bold term + indented description list */
+.detail-list{ margin: 0; }
+.detail-list dt{ font-weight: 700; color: var(--navy-text); font-size: 0.95rem; margin-top: 0.9rem; }
+.detail-list dd{ margin: 0.3rem 0 0 1.4rem; font-size: 0.95rem; }
+
+/* Small bold sub-headings between bullet groups */
+.detail-groups h4{ font-family: var(--sans-body); font-size: 0.95rem; margin: 1.4rem 0 0.6rem; }
+.detail-groups .lead-list li{ font-size: 0.95rem; }
+
+/* OEM model cards: separated white cards on navy */
+.oem-grid{ gap: 1.2rem; background: transparent; margin-bottom: 5rem; }
+.oem-grid .capability-card h3{ color: var(--navy-text); font-weight: 600; }
+.why-gt-heading{ margin-bottom: 0; }
+
+
+/* ============================================================
+   Steam Turbines services page additions
+   ============================================================ */
+
+/* Placeholder images (polished steel / workshop tones) */
+.ph-st-hero{ background: linear-gradient(120deg,#c9a42a,#8b9096 25%,#c9ced2 50%,#9aa3aa 70%,#3f5f9a 90%); }
+.ph-st-rotor-lift{ background: linear-gradient(135deg,#c96a2a,#e8c43a 20%,#6b7076 45%,#3a4046 75%,#4caf6b); }
+.ph-st-shop{ background: linear-gradient(135deg,#2a2d30,#8b9096 40%,#c9ced2 65%,#c9a272); }
+.ph-st-blades{ background: linear-gradient(135deg,#1c2530,#c9ced2 30%,#3a4046 55%,#eef0f2 85%); }
+.ph-st-metrology{ background: linear-gradient(135deg,#c94a3a,#8a7558 30%,#2a3036 60%,#4caf6b 85%); }
+.ph-st-rotor-stand{ background: linear-gradient(135deg,#e8e03a,#d8dcdf 30%,#9aa3aa 55%,#c9ced2 80%,#5a6168); }
+.ph-st-parts{ background: linear-gradient(135deg,#6b7076,#b8bfc5 40%,#d8dcdf 65%,#8b9096); }
+
+/* Images spread down the full height of a long text column */
+.two-col.align-top .media-spread{ align-self: stretch; align-content: space-between; }
+
+/* Second heading further down the same text column */
+.subsection-heading{ margin-top: 2.5rem; }
+
+/* Multi-level bullet lists (disc > circle > square) */
+.nested-list ul{ padding-left: 1.4rem; margin: 0.5rem 0 0.8rem; }
+.nested-list ul ul{ list-style-type: square; margin-top: 0.4rem; }
+.nested-list li{ font-size: 0.95rem; }
