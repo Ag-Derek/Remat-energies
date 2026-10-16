@@ -1272,3 +1272,145 @@ section.section{ padding: 4.5rem 0; }
 .nested-list ul{ padding-left: 1.4rem; margin: 0.5rem 0 0.8rem; }
 .nested-list ul ul{ list-style-type: square; margin-top: 0.4rem; }
 .nested-list li{ font-size: 0.95rem; }
+
+
+/* ============================================================
+   Field Service services page additions
+   ============================================================ */
+
+/* Placeholder images (refinery steel / safety yellow / coverall blue tones) */
+.ph-field-hero{ background: linear-gradient(120deg,#2f6fb0,#8fb8de 25%,#9aa3aa 45%,#c9ced2 60%,#3a4650 85%); }
+.ph-field-turnaround{ background: linear-gradient(135deg,#2a3036,#6b7680 40%,#e8c43a 70%,#8b9096); }
+.ph-field-millwright{ background: linear-gradient(135deg,#3a2a18,#a9783a 40%,#e8a13c 65%,#5a6168); }
+.ph-field-maintenance{ background: linear-gradient(135deg,#1c2b3a,#5a7186 45%,#c9ced2 75%); }
+.ph-field-metrology{ background: linear-gradient(135deg,#2f4fa0,#6fa9d6 40%,#e6e8ea 70%,#8b9096); }
+.ph-field-alignment{ background: linear-gradient(135deg,#1f3f7a,#3f6fb0 40%,#c94a3a 65%,#5a6168); }
+.ph-field-machining{ background: radial-gradient(circle at 40% 40%, #f2f3f2, #b7c0c6 45%, #2f6fb0 75%, #1c2b3a); }
+.ph-field-servicing{ background: linear-gradient(135deg,#2a2018,#8a5a2e 35%,#c9a272 60%,#3a4650); }
+.ph-field-onsite{ background: linear-gradient(135deg,#3a2a18,#c96a2a 35%,#e8c43a 55%,#2f6fb0 80%); }
+.ph-field-parts{ background: linear-gradient(135deg,#1c2b3a,#2f6fb0 40%,#cfe0ee 65%,#e8862a 85%); }
+.ph-field-walkway{ background: linear-gradient(160deg,#e8c43a,#c9a42a 25%,#9aa3aa 50%,#2f5fb0 75%,#1c2b3a); min-height: 420px; }
+.ph-field-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#1c2b3a,#3f5f8a 30%,#8fb8de 50%,#5a6168 75%,#2a3036); }
+.ph-eq-centrifugal{ background: radial-gradient(circle at 50% 50%, #eef0f2, #9aa3aa 45%, #3a4650); }
+.ph-eq-steam{ background: linear-gradient(135deg,#101418,#3a3f45 50%,#c9ced2); }
+.ph-eq-gas{ background: radial-gradient(circle at 50% 50%, #e8c43a, #8b9096 45%, #3a4650); }
+.ph-eq-recip{ background: linear-gradient(135deg,#5a6168,#c9ced2 45%,#8b9096); }
+.ph-eq-integral{ background: linear-gradient(135deg,#1f4f8a,#3f86d1 45%,#a9cff0); }
+.ph-eq-hydro{ background: radial-gradient(circle at 50% 50%, #f2d43a, #c9a42a 40%, #5a6168); }
+.ph-eq-gearbox{ background: radial-gradient(circle at 45% 45%, #d8dcdf, #6b7076 50%, #2a3036); }
+.ph-eq-pumps{ background: linear-gradient(135deg,#3a4650,#8b9096 45%,#e6e8ea); }
+.ph-eq-generators{ background: linear-gradient(160deg,#6fa9d6,#cfe0ee 40%,#5a6168 70%); }
+.ph-eq-extruders{ background: radial-gradient(circle at 50% 50%, #eef0f2, #b8bfc5 40%, #6b7076); }
+
+/* Field services offered: small horizontal image + label tiles */
+.fs-tile-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+.fs-tile{
+  display:flex;
+  align-items:center;
+  gap: 1rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(12,43,77,0.12);
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+}
+.fs-tile .ph{ width: 72px; height: 72px; flex-shrink:0; aspect-ratio: auto; border-radius: 6px; }
+.fs-tile h3{ font-size: 0.98rem; margin:0; }
+
+/* Equipment cards: navy top band, round image, title */
+.equip-grid{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 1.6rem;
+  margin-top: 2.5rem;
+}
+.equip-card{
+  flex: 0 0 calc((100% - 4.8rem) / 4);
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(12,43,77,0.12);
+  overflow:hidden;
+  text-align:center;
+  padding-bottom: 1.4rem;
+}
+.equip-card::before{
+  content:"";
+  display:block;
+  height: 70px;
+  background: linear-gradient(180deg, var(--navy-text), var(--steel));
+}
+.equip-card .ph{
+  width: 110px; height: 110px;
+  aspect-ratio: auto;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  margin: -55px auto 1rem;
+}
+.equip-card h3{ font-size: 1rem; margin:0; padding: 0 0.8rem; }
+
+/* Stats on navy */
+.section-navy .stats-grid.cols-3{ grid-template-columns: repeat(3, 1fr); margin-top: 2.5rem; }
+.section-navy .stat-number{ color: var(--white); }
+.section-navy .stat-label{ color: rgba(255,255,255,0.8); }
+.stat-icon{ display:inline-flex; margin-bottom: 0.8rem; }
+
+/* OEM agnostic brand grid */
+.brand-grid{
+  list-style:none;
+  margin: 2.5rem auto 0;
+  padding:0;
+  max-width: 900px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem 2rem;
+  text-align:center;
+}
+.brand-grid li{ font-family: var(--serif-head); font-weight: 700; font-size: 1.1rem; color: var(--navy-text); }
+.brand-grid li:nth-child(3n+2){ color: var(--blue-accent); }
+.brand-grid li:nth-child(3n){ color: var(--steel); }
+.brand-grid li:last-child{ grid-column: 1 / -1; color: var(--navy-text); }
+
+@media (max-width: 900px){
+  .fs-tile-grid{ grid-template-columns: repeat(2, 1fr); }
+  .equip-card{ flex-basis: calc((100% - 1.6rem) / 2); }
+}
+@media (max-width: 700px){
+  .fs-tile-grid, .brand-grid{ grid-template-columns: 1fr; }
+  .section-navy .stats-grid.cols-3{ grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
+   Controls Services Technology page additions
+   ============================================================ */
+
+/* Placeholder images (control cabinets / panel blue / instrumentation tones) */
+.ph-cst-hero{ background: linear-gradient(120deg,#1c2b3a,#3f5f8a 30%,#8fb8de 50%,#e8c43a 70%,#3a4650); }
+.ph-cst-oilgas{ background: linear-gradient(135deg,#0d1b2b,#3f6fb0 45%,#e8a13c 75%); }
+.ph-cst-petro{ background: linear-gradient(135deg,#0b1b33,#5a6168 45%,#cfe0ee 75%); }
+.ph-cst-power{ background: linear-gradient(135deg,#2a3036,#9aa3aa 45%,#e8c43a 75%); }
+.ph-cst-plant{ background: linear-gradient(135deg,#1c2530,#2f6fb0 45%,#c9ced2 75%); }
+.ph-cst-cabinet{ background: linear-gradient(135deg,#c9ced2,#eef0f2 35%,#3f5f8a 60%,#8b9096); }
+.ph-cst-technician{ background: linear-gradient(135deg,#c96a2a,#e8a13c 25%,#c9ced2 55%,#2f5fb0 80%); }
+.ph-cst-panel{ background: linear-gradient(160deg,#5a6168,#c9ced2 35%,#2f6fb0 60%,#1c2b3a); }
+.ph-cst-hmi{ background: linear-gradient(135deg,#0b1626,#1c3a5e 40%,#37c9d9 70%,#c9ced2); }
+.ph-cst-plc{ background: linear-gradient(135deg,#eef0f2,#b8bfc5 40%,#3a4650 65%,#4caf6b 85%); }
+.ph-cst-rack{ background: linear-gradient(135deg,#2a3036,#6b7680 40%,#c94a3a 60%,#9aa3aa); }
+.ph-cst-training{ background: linear-gradient(135deg,#3a4650,#8fb8de 40%,#e8c43a 65%,#c9ced2); }
+.ph-cst-field{ background: linear-gradient(160deg,#e8c43a,#c9a42a 25%,#3f6fb0 55%,#1c2b3a); }
+.ph-cst-recip{ background: linear-gradient(135deg,#5a6168,#c9ced2 45%,#c94a3a 75%); }
+.ph-cst-screw{ background: linear-gradient(135deg,#2f4fa0,#6fa9d6 40%,#e6e8ea 75%); }
+.ph-cst-engine{ background: radial-gradient(circle at 50% 50%, #f07a32, #c4471a 40%, #3a4046); }
+.ph-cst-valve{ background: radial-gradient(circle at 50% 50%, #c94a3a, #8b9096 45%, #2a3036); }
+.ph-cst-instrument{ background: radial-gradient(circle at 50% 50%, #eef0f2, #6fa9d6 45%, #1c2b3a); }
+.ph-cst-hvac{ background: radial-gradient(circle at 50% 50%, #d8dcdf, #9aa3aa 45%, #3f5f8a); }
+
+/* Text-only cards (no image) and a card-level button */
+.text-cards .product-card{ display:flex; flex-direction:column; justify-content:center; }
+.product-card .btn{ margin-top: 1.4rem; }
