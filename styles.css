@@ -1414,3 +1414,16 @@ section.section{ padding: 4.5rem 0; }
 /* Text-only cards (no image) and a card-level button */
 .text-cards .product-card{ display:flex; flex-direction:column; justify-content:center; }
 .product-card .btn{ margin-top: 1.4rem; }
+
+
+/* ============================================================
+   Controls Training services page additions
+   ============================================================ */
+
+/* Placeholder images (classroom / HMI screen tones) */
+.ph-ct-hero{ background: linear-gradient(120deg,#0b1626,#1c3a5e 30%,#37c9d9 50%,#c9ced2 70%,#2f5fb0 90%); }
+.ph-ct-lab{ background: linear-gradient(135deg,#3a4046,#9aa3aa 35%,#e8c43a 55%,#c9ced2 75%,#5a6168); }
+.ph-ct-classroom{ background: linear-gradient(160deg,#eef0f2,#c9ced2 35%,#6b7680 60%,#2a3036); }
+
+/* Capability cards as separated white tiles (no section-height bottom margin) */
+.capability-grid.spaced{ gap: 1.2rem; background: transparent; }
