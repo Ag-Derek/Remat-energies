@@ -168,3 +168,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+// ============================================================
+// Bearings page — tabbed info panel
+// ============================================================
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelectorAll('[data-tabs]').forEach(function (tabs) {
+    var buttons = Array.prototype.slice.call(tabs.querySelectorAll('[role="tab"]'));
+
+    function select(btn) {
+      buttons.forEach(function (b) {
+        var selected = b === btn;
+        b.setAttribute('aria-selected', selected ? 'true' : 'false');
+        b.tabIndex = selected ? 0 : -1;
+        document.getElementById(b.getAttribute('aria-controls')).hidden = !selected;
+      });
+    }
+
+    buttons.forEach(function (btn, i) {
+      btn.addEventListener('click', function () { select(btn); });
+      btn.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') next = buttons[(i + 1) % buttons.length];
+        if (e.key === 'ArrowLeft') next = buttons[(i - 1 + buttons.length) % buttons.length];
+        if (next) { e.preventDefault(); select(next); next.focus(); }
+      });
+    });
+  });
+
+});

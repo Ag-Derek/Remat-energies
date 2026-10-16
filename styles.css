@@ -1447,3 +1447,103 @@ section.section{ padding: 4.5rem 0; }
 .ph-parts-warehouse{ background: linear-gradient(135deg,#3a2a18,#c9a272 35%,#2f6fb0 60%,#e8c43a 85%); }
 .ph-parts-lifeline{ background: radial-gradient(circle at 55% 45%, #eef0f2, #b8bfc5 35%, #3a4650 70%); min-height: 380px; }
 .ph-parts-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#0c2b4d,#1c3a5e 35%,#4d8fc4 55%,#7d97ad 70%,#0c2b4d); }
+
+
+/* ============================================================
+   Repairs services page additions
+   ============================================================ */
+
+/* Placeholder images (yellow crane / repair shop tones) */
+.ph-rep-hero{ background: linear-gradient(120deg,#e8c43a,#c9a42a 20%,#2f5fb0 45%,#8b9096 65%,#3a4650); }
+.ph-rep-disassembly{ background: linear-gradient(135deg,#2a3036,#8b9096 45%,#c94a3a 75%); }
+.ph-rep-cleaning{ background: linear-gradient(135deg,#6fa9d6,#d8dcdf 45%,#8b9096 75%); }
+.ph-rep-welding{ background: radial-gradient(circle at 45% 50%, #fff3c4, #e8a13c 25%, #3a4650 60%, #1c2530); }
+.ph-rep-coating{ background: linear-gradient(135deg,#8a5a2e,#c9822f 40%,#e8c47a 70%,#6b7076); }
+.ph-rep-painting{ background: linear-gradient(135deg,#2f6fb0,#8fb8de 40%,#e6e8ea 70%,#5a6168); }
+.ph-rep-shop{ background: linear-gradient(160deg,#2a2018,#c9822f 30%,#e8c43a 50%,#5a6168 75%,#1c1410); min-height: 400px; }
+.ph-rep-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#c9822f,#3a4650 30%,#2f5fb0 55%,#8b9096 75%,#2a3036); }
+
+/* Image + caption cards with no card background */
+.product-card-grid.plain-cards .product-card{ background: transparent; padding: 0; }
+.plain-cards .product-card .ph{ border-radius: 4px; margin-bottom: 0.9rem; }
+.plain-cards .product-card h3{ font-size: 1.05rem; font-weight: 600; margin: 0; }
+
+
+/* ============================================================
+   Bearings services page additions
+   ============================================================ */
+
+/* Placeholder images (bronze babbitt / polished steel tones) */
+.ph-brg-hero{ background: radial-gradient(ellipse at 22% 45%, #c9a272 0%, #8b9096 22%, transparent 45%), linear-gradient(120deg,#5c7d9a,#3f5f8a 45%,#0c2b4d 80%); }
+.ph-brg-journal{ background: radial-gradient(circle at 50% 50%, #c9a272 0 18%, #6b7076 20%, #d8dcdf 45%, #8b9096 62%, #5c7d9a 80%); }
+.ph-brg-repair{ background: radial-gradient(circle at 50% 50%, #ffffff 0 20%, #d8dcdf 22%, #9aa3aa 55%, #eef0f2 80%); }
+.ph-brg-new{ background: radial-gradient(circle at 50% 50%, #3a4650 0 18%, #c9ced2 20%, #8b9096 50%, #2f6fb0 80%); }
+.ph-brg-engineering{ background: radial-gradient(circle at 50% 50%, #c9a272 0 22%, #6b7076 25%, #c9ced2 55%, #3f5f8a 80%); }
+
+/* Hero with the headline sitting right of the image */
+.hero-right .hero-content{ margin: 0 0 0 auto; text-align: left; max-width: 560px; }
+
+/* Tabbed info panel */
+.tabs-list{ display:flex; flex-wrap: wrap; gap: 0.3rem; }
+.tabs-list [role="tab"]{
+  background: var(--steel);
+  color: var(--white);
+  border: 0;
+  border-radius: 6px 6px 0 0;
+  padding: 0.55rem 1.1rem;
+  font-family: var(--sans-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.tabs-list [role="tab"][aria-selected="true"]{ background: var(--navy); }
+.tab-panel{ background: var(--white); padding: 1.8rem 2rem; border-radius: 0 6px 6px 6px; }
+.tab-panel h3{ font-size: 1.15rem; margin-bottom: 0.6rem; }
+.tab-panel .lead-list{ margin-bottom: 0; }
+
+/* Product image with expandable hotspots */
+.hotspot-figure{ position: relative; max-width: 520px; margin: 2.5rem auto 0; }
+.hotspot-figure > .ph{ aspect-ratio: 1/1; border-radius: 50%; }
+.hotspot{ position: absolute; }
+.hotspot summary{
+  list-style: none;
+  display:inline-flex; align-items:center; gap: 0.4rem;
+  background: var(--navy);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.hotspot summary::-webkit-details-marker{ display:none; }
+.hotspot summary::before{ content:"+"; font-size: 1rem; line-height: 1; }
+.hotspot[open] summary::before{ content:"\2212"; }
+.hotspot p{
+  position: absolute; top: calc(100% + 0.4rem); left: 0;
+  width: 220px;
+  margin: 0;
+  background: var(--white);
+  color: var(--body-text);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 3;
+}
+.hotspot-bore{ top: 30%; left: 18%; }
+.hotspot-lube{ top: 34%; right: 2%; }
+.hotspot-lube p{ left: auto; right: 0; }
+.hotspot-materials{ top: 64%; left: 12%; }
+.hotspot-apps{ top: 82%; left: 46%; }
+
+/* Bearing service cards: round image inside white cards */
+.product-card .capability-circle{ width: 150px; height: 150px; }
+
+@media (max-width: 700px){
+  .hero-right .hero-content{ margin: 0 auto; }
+  .hotspot p{ width: 180px; }
+}
