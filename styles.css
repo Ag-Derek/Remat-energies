@@ -1447,3 +1447,23 @@ section.section{ padding: 4.5rem 0; }
 .ph-parts-warehouse{ background: linear-gradient(135deg,#3a2a18,#c9a272 35%,#2f6fb0 60%,#e8c43a 85%); }
 .ph-parts-lifeline{ background: radial-gradient(circle at 55% 45%, #eef0f2, #b8bfc5 35%, #3a4650 70%); min-height: 380px; }
 .ph-parts-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#0c2b4d,#1c3a5e 35%,#4d8fc4 55%,#7d97ad 70%,#0c2b4d); }
+
+
+/* ============================================================
+   Repairs services page additions
+   ============================================================ */
+
+/* Placeholder images (yellow crane / repair shop tones) */
+.ph-rep-hero{ background: linear-gradient(120deg,#e8c43a,#c9a42a 20%,#2f5fb0 45%,#8b9096 65%,#3a4650); }
+.ph-rep-disassembly{ background: linear-gradient(135deg,#2a3036,#8b9096 45%,#c94a3a 75%); }
+.ph-rep-cleaning{ background: linear-gradient(135deg,#6fa9d6,#d8dcdf 45%,#8b9096 75%); }
+.ph-rep-welding{ background: radial-gradient(circle at 45% 50%, #fff3c4, #e8a13c 25%, #3a4650 60%, #1c2530); }
+.ph-rep-coating{ background: linear-gradient(135deg,#8a5a2e,#c9822f 40%,#e8c47a 70%,#6b7076); }
+.ph-rep-painting{ background: linear-gradient(135deg,#2f6fb0,#8fb8de 40%,#e6e8ea 70%,#5a6168); }
+.ph-rep-shop{ background: linear-gradient(160deg,#2a2018,#c9822f 30%,#e8c43a 50%,#5a6168 75%,#1c1410); min-height: 400px; }
+.ph-rep-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#c9822f,#3a4650 30%,#2f5fb0 55%,#8b9096 75%,#2a3036); }
+
+/* Image + caption cards with no card background */
+.product-card-grid.plain-cards .product-card{ background: transparent; padding: 0; }
+.plain-cards .product-card .ph{ border-radius: 4px; margin-bottom: 0.9rem; }
+.plain-cards .product-card h3{ font-size: 1.05rem; font-weight: 600; margin: 0; }
