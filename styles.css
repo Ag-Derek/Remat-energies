@@ -1303,14 +1303,17 @@ section.section{ padding: 4.5rem 0; }
 .ph-eq-extruders{ background: radial-gradient(circle at 50% 50%, #eef0f2, #b8bfc5 40%, #6b7076); }
 
 /* Field services offered: small horizontal image + label tiles */
+/* flex-wrap (not grid) so a short last row stays centered */
 .fs-tile-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
   gap: 1.4rem;
   max-width: 900px;
   margin: 2.5rem auto 0;
 }
 .fs-tile{
+  flex: 0 0 calc((100% - 2.8rem) / 3);
   display:flex;
   align-items:center;
   gap: 1rem;
@@ -1377,11 +1380,12 @@ section.section{ padding: 4.5rem 0; }
 .brand-grid li:last-child{ grid-column: 1 / -1; color: var(--navy-text); }
 
 @media (max-width: 900px){
-  .fs-tile-grid{ grid-template-columns: repeat(2, 1fr); }
+  .fs-tile{ flex-basis: calc((100% - 1.4rem) / 2); }
   .equip-card{ flex-basis: calc((100% - 1.6rem) / 2); }
 }
 @media (max-width: 700px){
-  .fs-tile-grid, .brand-grid{ grid-template-columns: 1fr; }
+  .fs-tile{ flex-basis: 100%; }
+  .brand-grid{ grid-template-columns: 1fr; }
   .section-navy .stats-grid.cols-3{ grid-template-columns: 1fr; }
 }
 
@@ -1427,3 +1431,19 @@ section.section{ padding: 4.5rem 0; }
 
 /* Capability cards as separated white tiles (no section-height bottom margin) */
 .capability-grid.spaced{ gap: 1.2rem; background: transparent; }
+
+
+/* ============================================================
+   Parts services page additions
+   ============================================================ */
+
+/* Placeholder images (machined steel / red shop tones) */
+.ph-parts-hero{ background: linear-gradient(120deg,#8a1f1a,#c94a3a 30%,#6b7076 55%,#c9ced2 75%,#3a4650); }
+.ph-parts-blades{ background: linear-gradient(135deg,#eef0f2,#9aa3aa 40%,#3a4650 75%); }
+.ph-parts-disk{ background: radial-gradient(circle at 50% 50%, #3a4650 0 18%, #c9ced2 20%, #8b9096 60%, #5a6168); }
+.ph-parts-diaphragm{ background: linear-gradient(135deg,#6b7076,#d8dcdf 40%,#9aa3aa 70%,#3a4046); }
+.ph-parts-baseplate{ background: linear-gradient(160deg,#5a6168,#9aa3aa 40%,#c9ced2 70%); }
+.ph-parts-engineer{ background: linear-gradient(135deg,#0e1526,#1c2b4a 40%,#4a6fa0 70%,#c9ced2); }
+.ph-parts-warehouse{ background: linear-gradient(135deg,#3a2a18,#c9a272 35%,#2f6fb0 60%,#e8c43a 85%); }
+.ph-parts-lifeline{ background: radial-gradient(circle at 55% 45%, #eef0f2, #b8bfc5 35%, #3a4650 70%); min-height: 380px; }
+.ph-parts-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#0c2b4d,#1c3a5e 35%,#4d8fc4 55%,#7d97ad 70%,#0c2b4d); }
