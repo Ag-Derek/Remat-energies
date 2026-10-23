@@ -1547,3 +1547,140 @@ section.section{ padding: 4.5rem 0; }
   .hero-right .hero-content{ margin: 0 auto; }
   .hotspot p{ width: 180px; }
 }
+
+
+/* ============================================================
+   Storage services page additions
+   ============================================================ */
+
+/* Placeholder images (warehouse yellows, steel greys, crate browns) */
+.ph-sto-hero{ background: linear-gradient(120deg,#2a3036,#e8c43a 25%,#6b7076 45%,#c9ced2 65%,#3a4650 85%); }
+.ph-sto-access{ background: linear-gradient(135deg,#3a4046,#9aa3aa 40%,#d8dcdf 65%,#5a6168); }
+.ph-sto-inventory{ background: linear-gradient(135deg,#2a2018,#8a7558 35%,#3f6fb0 60%,#c9ced2 85%); }
+.ph-sto-security{ background: linear-gradient(135deg,#0b1626,#1c3a5e 40%,#4d8fc4 70%,#c9ced2); }
+.ph-sto-racking{ background: linear-gradient(135deg,#e8c43a,#c9a42a 30%,#3a4650 60%,#9aa3aa); }
+.ph-sto-maintenance{ background: linear-gradient(135deg,#d8dcdf,#9aa3aa 40%,#c94a3a 65%,#5a6168); }
+.ph-sto-electrical{ background: linear-gradient(160deg,#eef0f2,#c9ced2 40%,#8b9096 70%,#3a4650); }
+.ph-sto-crates{ background: linear-gradient(135deg,#3a2a18,#8a5a2e 35%,#c9a272 65%,#5a6168); }
+.ph-sto-engineering{ background: linear-gradient(135deg,#c94a3a,#e8c43a 30%,#8b9096 60%,#2a3036); }
+.ph-sto-preservation{ background: linear-gradient(160deg,#eef0f2,#b8bfc5 35%,#6b5238 65%,#2a2018); }
+.ph-sto-mission{ background: linear-gradient(160deg,#3a4650,#e8c43a 30%,#9aa3aa 55%,#2f5fb0 80%); min-height: 380px; }
+.ph-sto-motor{ background: linear-gradient(135deg,#1f4f8a,#3f86d1 45%,#a9cff0 75%,#d8dcdf); }
+.ph-sto-prep{ background: linear-gradient(135deg,#8a5a2e,#c9a272 40%,#e8d9b8 70%,#9aa3aa); }
+.ph-sto-inspection{ background: linear-gradient(135deg,#eef0f2,#c9ced2 40%,#e8e03a 65%,#3a4650); }
+.ph-sto-shaft{ background: radial-gradient(circle at 45% 50%, #f2d43a, #c9a42a 30%, #6b5238 60%, #2a2018); }
+.ph-sto-nitrogen{ background: linear-gradient(135deg,#6b7076,#c9ced2 40%,#3f6fb0 65%,#8b9096); }
+.ph-sto-oil{ background: linear-gradient(135deg,#eef0f2,#d8dcdf 40%,#c9a42a 65%,#6b7076); }
+.ph-sto-transport{ background: linear-gradient(135deg,#3a4046,#c96a2a 35%,#e8a13c 60%,#5a6168); }
+.ph-sto-repair{ background: linear-gradient(135deg,#5a6168,#c9ced2 40%,#e8e03a 65%,#3f5f8a); }
+.ph-sto-megging{ background: linear-gradient(135deg,#2a3036,#6b7076 35%,#e8c43a 65%,#c9ced2); }
+.ph-sto-balancing{ background: radial-gradient(circle at 40% 45%, #eef0f2, #9aa3aa 40%, #3a4650 75%); }
+.ph-sto-cleaning{ background: linear-gradient(135deg,#c9ced2,#e8862a 35%,#6fa9d6 60%,#8b9096); }
+.ph-sto-install{ background: linear-gradient(135deg,#2a2018,#8a7558 35%,#c9ced2 60%,#c94a3a 85%); }
+.ph-sto-banner{ position:absolute; inset:0; background: linear-gradient(120deg,#c9a272,#8a7558 25%,#5a6168 50%,#8fb8de 70%,#3a4650); }
+
+/* Capabilities section: cream band with a wave at top and a slanted bottom edge */
+.storage-capabilities{ padding-top: 6rem; }
+.storage-cap-grid{ max-width: 860px; margin-left: auto; margin-right: auto; gap: 2rem 3rem; }
+.storage-cap-grid .product-card .ph{ aspect-ratio: 1/0.9; border-radius: 8px; }
+.storage-cap-grid .product-card h3{ font-family: var(--sans-body); font-size: 0.98rem; }
+
+/* Value-added services: cream cards with a small caption */
+.storage-service-grid{ max-width: 920px; margin-left: auto; margin-right: auto; gap: 2rem; }
+.storage-service-grid .product-card{ padding: 0.9rem 0.9rem 1.1rem; }
+.storage-service-grid .product-card .ph{ aspect-ratio: 4/3; margin-bottom: 0.9rem; }
+.storage-service-grid .product-card h3{ font-family: var(--sans-body); font-size: 0.9rem; font-weight: 600; margin: 0; }
+
+
+/* ============================================================
+   About Us page additions
+   ============================================================ */
+
+/* Single-column dropdown (About Us menu has only a few items) */
+.main-nav .dropdown-menu.dropdown-menu-single{ min-width: 220px; grid-auto-flow: row; grid-template-rows: none; }
+
+/* Placeholder images */
+.ph-about-hero{ background: linear-gradient(180deg,#2f6fb0 0%,#8fb8de 40%,#d8dcdf 58%,#6b7076 75%,#3f5f3a 100%); }
+.ph-about-workshop{ background: linear-gradient(135deg,#3a4650,#8b9096 35%,#e8c43a 55%,#c9ced2 80%); min-height: 400px; }
+.ph-about-hall{ background: linear-gradient(160deg,#eef0f2,#c9ced2 35%,#2f5fb0 60%,#e8a13c 75%,#8b9096); min-height: 560px; }
+.ph-about-ceo{ background: radial-gradient(circle at 50% 38%, #e8c9a8 0 16%, #3a4650 17%, #1c2b4a 55%, #0c2b4d); }
+.ph-about-team{ background: linear-gradient(120deg,#0c2b4d,#3a4650 30%,#8b9096 55%,#c9a272 75%,#5a6168); }
+
+/* Hero text block */
+.hero-right .about-hero-content{ text-align: center; }
+
+/* Who we are lead statement */
+.about-lead{ text-align:center; font-size: 1.15rem; margin-bottom: 1.6rem; }
+
+/* Vision / Mission: centered text with a rule before each heading */
+.vision-block{ text-align:center; }
+.line-heading{
+  display:flex; align-items:center; justify-content:center; gap: 1.2rem;
+  font-size: 1.5rem; margin-top: 2.5rem;
+}
+.line-heading:first-child{ margin-top: 1rem; }
+.line-heading::before{ content:""; width: 80px; height: 1px; background: var(--navy-text); }
+.center-list{ list-style-position: inside; padding: 0; margin: 0; }
+.center-list li{ margin-bottom: 0.6rem; font-size: 0.95rem; }
+
+/* CEO message */
+.ceo-photo{ width: min(300px, 100%); aspect-ratio: 1/1; border-radius: 50%; margin: 0 auto; }
+.ceo-signature{ font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: var(--navy-text); margin: 1.6rem 0 0.4rem 1.5rem; }
+.ceo-name{ font-weight:700; color: var(--navy-text); text-decoration: underline; text-underline-offset: 3px; margin: 0 0 0.2rem; }
+.ceo-title{ font-weight:700; color: var(--navy-text); font-size: 0.9rem; margin: 0; }
+
+/* Commitment band: navy with the photo fading in from the right */
+.commit-band{
+  position: relative;
+  background: var(--navy);
+  min-height: 460px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+.commit-band .ph-about-team{
+  position:absolute; top:0; right:0; bottom:0; width: 62%;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 35%);
+          mask-image: linear-gradient(90deg, transparent, #000 35%);
+}
+.commit-band .wrap{ position:relative; z-index:1; width:100%; }
+.commit-band .banner-text{ max-width: 380px; font-weight: 600; }
+
+/* Brand logos in the carousel */
+.brand-badge{ background: var(--white); border-color: transparent; justify-content:center; align-items:center; min-height: 110px; }
+.brand-badge img{ max-height: 48px; width: auto; }
+
+/* Milestones: vertical timeline with entries alternating left / right */
+.timeline{ position:relative; list-style:none; max-width: 780px; margin: 3rem auto 0; padding: 0; }
+.timeline::before{
+  content:""; position:absolute; top:0; bottom:0; left:50%;
+  width: 2px; background: var(--steel); transform: translateX(-50%);
+}
+.timeline-item{ position:relative; width:50%; padding: 2.5rem 2.6rem; }
+.timeline-item:nth-child(odd){ text-align:right; }
+.timeline-item:nth-child(even){ margin-left:50%; }
+.timeline-item::after{
+  content:""; position:absolute; top: 2.75rem;
+  width: 14px; height: 14px; border-radius:50%;
+  background: var(--white); border: 3px solid var(--navy);
+}
+.timeline-item:nth-child(odd)::after{ right: -7px; }
+.timeline-item:nth-child(even)::after{ left: -7px; }
+.timeline-item h3{ font-size: 1rem; margin: 0 0 0.2rem; }
+.timeline-date{ font-size: 0.8rem; color: var(--steel); margin: 0; }
+.timeline-card{ display:inline-block; background: var(--cream); padding: 1.1rem 1.3rem; max-width: 280px; text-align:left; margin-bottom: 0.5rem; }
+.timeline-card p{ font-size: 0.85rem; margin: 0; }
+
+@media (max-width: 900px){
+  .ph-about-hall{ min-height: 360px; }
+  .commit-band .ph-about-team{ width: 100%; opacity: 0.35; -webkit-mask-image: none; mask-image: none; }
+}
+@media (max-width: 700px){
+  .timeline::before{ left: 7px; transform: none; }
+  .timeline-item,
+  .timeline-item:nth-child(even){ width: 100%; margin-left: 0; padding: 1.5rem 0 1.5rem 2.2rem; }
+  .timeline-item:nth-child(odd){ text-align:left; }
+  .timeline-item::after,
+  .timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after{ left: 1px; right: auto; top: 1.75rem; }
+}
