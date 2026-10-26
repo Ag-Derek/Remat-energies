@@ -1753,3 +1753,35 @@ img.cert-doc{ object-fit: contain; background: var(--white); }
 @media (max-width: 700px){
   .quality-principles{ grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Insights: News and Articles pages
+   ============================================================ */
+
+.ph-news-hero{ background: linear-gradient(160deg,#081d38 0%,#274257 35%,#4a7fa3 65%,#dfae3f 100%); }
+.ph-articles-hero{ background: linear-gradient(160deg,#0b1626 0%,#123a5e 45%,#8b9096 75%,#c9ced2 100%); }
+.ph-post1{ background: linear-gradient(135deg,#3a4650,#8b9096 45%,#e8c43a); }
+.ph-post2{ background: linear-gradient(135deg,#0b1626,#123a5e 45%,#37c9d9); }
+.ph-post3{ background: linear-gradient(135deg,#274257,#4a7fa3 45%,#dfae3f); }
+.ph-post4{ background: linear-gradient(135deg,#0c2b4d,#2f5fb0 50%,#c9ced2); }
+.ph-post5{ background: linear-gradient(135deg,#3f5f3a,#6b7076 50%,#d8dcdf); }
+.ph-post6{ background: linear-gradient(135deg,#081d38,#3a4650 45%,#c9a272); }
+
+/* Post cards: image, date, title, Read More, 3 across */
+.post-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 2rem; }
+.post-card{ display:flex; flex-direction:column; }
+.post-card .ph{ aspect-ratio: 16/9; margin-bottom: 1.1rem; }
+.post-date{ font-size: 0.85rem; color: var(--steel); margin: 0 0 0.4rem; }
+.post-card h3{ font-size: 1.1rem; margin: 0 0 0.9rem; }
+.post-more{
+  margin-top: auto; align-self: flex-start;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--blue-accent);
+}
+
+@media (max-width: 900px){
+  .post-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+  .post-grid{ grid-template-columns: 1fr; }
+}
