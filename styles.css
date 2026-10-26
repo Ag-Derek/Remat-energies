@@ -1684,3 +1684,35 @@ section.section{ padding: 4.5rem 0; }
   .timeline-item:nth-child(odd)::after,
   .timeline-item:nth-child(even)::after{ left: 1px; right: auto; top: 1.75rem; }
 }
+
+/* ============================================================
+   Board of Directors page
+   ============================================================ */
+
+.ph-board-hero{ background: linear-gradient(160deg,#0c2b4d 0%,#3a4650 35%,#8b9096 60%,#c9a272 80%,#5a6168 100%); }
+
+.board-intro{ text-align:center; max-width: 720px; margin: 0 auto 3rem; }
+
+/* Member cards: 4 across on desktop, wrapping down to 1 on phones */
+.board-grid{
+  list-style:none; margin:0; padding:0;
+  display:grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem 1.8rem;
+}
+.board-card{ text-align:center; }
+.board-photo{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio: 4/5; margin-bottom: 1.1rem; overflow:hidden;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 55%, var(--steel) 100%);
+  font-family: var(--serif-head); font-size: 2.6rem; font-weight: 700; color: var(--navy-text);
+}
+.board-photo img{ width:100%; height:100%; object-fit:cover; }
+.board-card h3{ font-size: 1.1rem; margin: 0 0 0.25rem; }
+.board-title{ font-size: 0.9rem; font-weight: 600; color: var(--steel); margin: 0; }
+
+@media (max-width: 900px){
+  .board-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px){
+  .board-grid{ grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
+}
