@@ -320,39 +320,58 @@ img.choose-circle{ display:block; width:150px; object-fit: cover; }
 .ph-co2{ background: linear-gradient(135deg,#5a3b6b,#a9628f 45%,#e8a0b0); }
 .ph-seals{ background: linear-gradient(135deg,#1c1410,#7a5a3e 45%,#c9a26c); }
 
-/* Parts band */
+/* Parts band: four tall, narrow columns in a centred block */
 .parts-band{
   display:grid;
   grid-template-columns: repeat(4,1fr);
-  margin-top: 1rem;
+  max-width: 1080px;
+  margin: 1rem auto 0;
 }
 .parts-item{
-  padding: 2.2rem 1.5rem;
-  min-height: 320px;
+  padding: 6.5rem 1.2rem 0;
+  min-height: 600px;
   display:flex;
   flex-direction: column;
   align-items:center;
   justify-content: flex-start;
-  gap: 1.2rem;
   text-align:center;
   position: relative;
+  overflow: hidden;
 }
-.parts-item h4{ color: var(--white); font-size: 1.2rem; margin:0; }
-.parts-navy{ background: var(--navy); }
-.parts-steel{ background: var(--steel); }
-.parts-cream{ background: var(--cream); }
-.parts-cream h4{ color: var(--navy-text); }
-.parts-blue{ background: var(--blue-light); }
-.spark{ position:absolute; top: 1.4rem; color: rgba(255,255,255,0.85); font-size: 1.3rem; }
+.parts-item h4{ color: var(--white); font-size: clamp(1.4rem, 2.4vw, 2.1rem); font-weight: 500; line-height: 1.45; margin:0; }
+.parts-navy{ background: #022856; }
+.parts-steel{ background: #789fba; }
+.parts-cream{ background: #edebd3; }
+.parts-cream h4{ color: #022856; }
+.parts-blue{ background: #3ca3dc; }
+.spark{ position:absolute; top: 2rem; left: 0; right: 0; color: var(--white); font-size: 2.6rem; line-height: 1; }
 .parts-item .ph{
-  width: 90px; height: 130px;
   aspect-ratio: auto;
-  border-radius: 6px;
   margin-top: auto;
+  transform-origin: bottom center;
+  animation: part-grow 6s ease-in-out infinite;
+}
+/* Placeholder silhouettes until cut-out part photos are added */
+.parts-item .ph-turbine-part{ width: 70%; height: 300px; align-self: flex-end; border-radius: 10px 10px 0 0; }
+.parts-item .ph-impeller{ width: 70%; height: 120px; border-radius: 50% 50% 8px 8px; margin-bottom: 1.5rem; }
+.parts-item .ph-bearing-part{ width: 80%; aspect-ratio: 1; height: auto; border-radius: 50%; margin-bottom: 0.8rem; }
+.parts-item .ph-shaft{ width: calc(100% + 1.2rem); height: 170px; align-self: flex-end; margin-right: -1.2rem; border-radius: 80px 0 0 0; }
+
+/* Parts loop: start small, grow to full size, hold, shrink back */
+@keyframes part-grow{
+  0%, 10%   { transform: scale(0.4); }
+  30%, 75%  { transform: scale(1); }
+  95%, 100% { transform: scale(0.4); }
+}
+.parts-band .parts-item:nth-child(2) .ph{ animation-delay: 0.3s; }
+.parts-band .parts-item:nth-child(3) .ph{ animation-delay: 0.6s; }
+.parts-band .parts-item:nth-child(4) .ph{ animation-delay: 0.9s; }
+@media (prefers-reduced-motion: reduce){
+  .parts-item .ph{ animation: none; }
 }
 .ph-turbine-part{ background: linear-gradient(160deg,#dfe4e7,#8b98a1); }
 .ph-impeller{ background: linear-gradient(160deg,#eef1f2,#9aa7b0); }
-.ph-bearing-part{ background: linear-gradient(160deg,#e7e0c9,#8c98a3); }
+.ph-bearing-part{ background: linear-gradient(160deg,#c9ced2,#5a6168); }
 .ph-shaft{ background: linear-gradient(160deg,#d8b46a,#7a5a2e); }
 
 /* ---------------- Video ---------------- */
@@ -582,6 +601,9 @@ img.choose-circle{ display:block; width:150px; object-fit: cover; }
   .header-actions .btn-primary{ display:none; }
   .choose-grid, .services-grid{ grid-template-columns: 1fr; }
   .parts-band{ grid-template-columns: 1fr 1fr; }
+  .parts-item{ min-height: 440px; padding-top: 5rem; }
+  .parts-item .ph-turbine-part{ height: 200px; }
+  .parts-item .ph-shaft{ height: 120px; }
   .industries-grid{ grid-template-columns: repeat(2,1fr); }
   section.section{ padding: 3rem 0; }
 }
