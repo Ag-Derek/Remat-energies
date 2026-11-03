@@ -91,7 +91,10 @@ section.section{ padding: 4.5rem 0; }
   z-index: 100;
   background: var(--white);
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
 }
+/* Slides out of view while scrolling down; script.js toggles it */
+.site-header.header-hidden{ transform: translateY(-100%); }
 .header-inner{
   max-width: var(--wrap);
   margin: 0 auto;
@@ -194,6 +197,12 @@ section.section{ padding: 4.5rem 0; }
 .who-we-are{ padding-top: 4rem; }
 .who-we-are h2{ margin-top: 1.5rem; }
 
+/* One image beside the text, running from the first line to the last */
+.who-row{ align-items: stretch; }
+.who-row .col-media{ display:flex; }
+.who-row .col-media .ph{ aspect-ratio: auto; min-height: 260px; height: 100%; border-radius: 0; }
+.who-row .col-media img.ph{ object-position: center top; }
+
 /* ---------------- Placeholder image blocks ---------------- */
 .ph{
   width:100%;
@@ -205,8 +214,21 @@ section.section{ padding: 4.5rem 0; }
 }
 .col-media .ph{ aspect-ratio: 4/3.4; min-height: 320px; }
 
-.ph-control-room{ background: linear-gradient(135deg,#12283f,#2c5170 55%,#7fa9c9); min-height: 380px;}
+/* Real photos: swap a placeholder <div> for an <img> with the same classes, e.g.
+   <img class="ph ph-gas-turbine" src="images/gas-turbine.jpg" alt="...">
+   The photo is cropped to fill the slot; the gradient shows only while it loads. */
+img.ph, img.hero-media, img.ceo-photo, img[class*="ph-"]{
+  display:block;
+  width:100%;
+  object-fit: cover;
+  object-position: center;
+}
+img.hero-media, img.ph-fleet, img.ph-office, img.ph-engineering-excellence, img[class*="-banner"]{
+  height:100%;
+}
+img.ceo-photo{ width: min(300px, 100%); }
 
+.ph-control-room{ background: linear-gradient(135deg,#12283f,#2c5170 55%,#7fa9c9); min-height: 380px;}
 /* Why choose circles */
 .why-choose{ background: var(--white); }
 .choose-grid{
@@ -230,6 +252,7 @@ section.section{ padding: 4.5rem 0; }
   border: 6px solid var(--cream);
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
+img.choose-circle{ display:block; width:150px; object-fit: cover; }
 .choose-card h3{ font-size: 1.15rem; }
 .choose-card p{ font-size: 0.92rem; }
 

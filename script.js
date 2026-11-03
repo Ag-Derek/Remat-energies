@@ -23,6 +23,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Hide header on scroll down, show on scroll up ---------- */
+  var siteHeader = document.querySelector('.site-header');
+  var lastScrollY = window.scrollY;
+
+  function updateHeaderVisibility() {
+    if (!siteHeader) return;
+    var y = window.scrollY;
+    var menuOpen = mainNav && mainNav.classList.contains('open');
+    if (Math.abs(y - lastScrollY) < 5) return;
+    if (y > lastScrollY && y > siteHeader.offsetHeight && !menuOpen) {
+      siteHeader.classList.add('header-hidden');
+    } else {
+      siteHeader.classList.remove('header-hidden');
+    }
+    lastScrollY = y;
+  }
+
+  window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+
   /* ---------- Header shadow / active link on scroll ---------- */
   var navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
   var sections = [];
