@@ -441,22 +441,24 @@ img.choose-circle{ display:block; width:150px; object-fit: cover; }
 .industries-grid{
   display:grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 1.6rem;
+  gap: 1.25rem;
   margin-top: 2.5rem;
 }
 .industry-card{
   background: var(--cream);
-  padding: 1.6rem 1rem 1.8rem;
+  padding: 2rem 1.5rem 1.8rem;
   text-align:center;
 }
 .ind-circle{
-  width: 130px; height:130px;
+  width: 80%; height:auto;
+  aspect-ratio: 1;
   border-radius:50%;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.2rem;
   background-size:cover;
   background-position:center;
 }
-.industry-card span{ font-weight:700; color: var(--navy-text); font-size: 0.98rem; }
+img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
+.industry-card span{ display:block; font-weight:600; color: var(--navy-text); font-size: clamp(1.05rem, 1.6vw, 1.35rem); }
 
 .ph-oilgas{ background: linear-gradient(135deg,#0d1b2b,#e8a13c 60%,#f7d98a); }
 .ph-petro{ background: linear-gradient(135deg,#0b1b33,#1c3a5e 55%,#e8c05a); }
