@@ -726,7 +726,7 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 .flip-card-front{ position:relative; }
 
 /* Workstation image on solutions section */
-.ph-workstation{ background: linear-gradient(120deg,#1f2b36,#4a6478 45%,#c9d3d8); min-height: 340px; }
+.col-media .ph-workstation{ background: none; aspect-ratio: auto; min-height: 0; height: auto; object-fit: contain; border-radius: 0; }
 
 /* Engineering excellence banner (text right-aligned) */
 .banner-engineering{ justify-content: flex-end; }
@@ -1478,6 +1478,20 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 
 /* Capability cards as separated white tiles (no section-height bottom margin) */
 .capability-grid.spaced{ gap: 1.2rem; background: transparent; }
+
+/* Engineering page: separated tiles with large true-circle photos */
+.eng-cap-grid .capability-card{ padding: 2.2rem 1.5rem 2rem; }
+.eng-cap-grid .capability-circle{
+  width: 200px; height: 200px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-bottom: 1.6rem;
+}
+.eng-cap-grid .capability-card h3{ font-size: 1.2rem; font-weight: 500; }
+@media (max-width: 700px){
+  .eng-cap-grid .capability-circle{ width: 140px; height: 140px; }
+}
 
 
 /* ============================================================
