@@ -213,6 +213,7 @@ section.section{ padding: 4.5rem 0; }
   position: relative;
 }
 .col-media .ph{ aspect-ratio: 4/3.4; min-height: 320px; }
+img.ph{ object-fit: cover; }
 
 /* Real photos: swap a placeholder <div> for an <img> with the same classes, e.g.
    <img class="ph ph-gas-turbine" src="images/gas-turbine.jpg" alt="...">
@@ -1291,7 +1292,7 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 .detail-groups .lead-list li{ font-size: 0.95rem; }
 
 /* OEM model cards: separated white cards on navy */
-.oem-grid{ gap: 1.2rem; background: transparent; margin-bottom: 5rem; }
+.oem-grid{ gap: 1.2rem; background: transparent; margin-top: 4rem; margin-bottom: 5rem; }
 .oem-grid .capability-card h3{ color: var(--navy-text); font-weight: 600; }
 .why-gt-heading{ margin-bottom: 0; }
 
@@ -1479,18 +1480,18 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 /* Capability cards as separated white tiles (no section-height bottom margin) */
 .capability-grid.spaced{ gap: 1.2rem; background: transparent; }
 
-/* Engineering page: separated tiles with large true-circle photos */
-.eng-cap-grid .capability-card{ padding: 2.2rem 1.5rem 2rem; }
-.eng-cap-grid .capability-circle{
+/* Separated tiles with large true-circle photos (engineering, gas turbine OEM grids) */
+.cap-grid-lg .capability-card{ padding: 2.2rem 1.5rem 2rem; }
+.cap-grid-lg .capability-circle{
   width: 200px; height: 200px;
   max-width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   margin-bottom: 1.6rem;
 }
-.eng-cap-grid .capability-card h3{ font-size: 1.2rem; font-weight: 500; }
+.cap-grid-lg .capability-card h3{ font-size: 1.2rem; font-weight: 500; }
 @media (max-width: 700px){
-  .eng-cap-grid .capability-circle{ width: 140px; height: 140px; }
+  .cap-grid-lg .capability-circle{ width: 140px; height: 140px; }
 }
 
 
