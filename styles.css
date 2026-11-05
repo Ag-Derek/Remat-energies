@@ -1350,28 +1350,39 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 .ph-eq-generators{ background: linear-gradient(160deg,#6fa9d6,#cfe0ee 40%,#5a6168 70%); }
 .ph-eq-extruders{ background: radial-gradient(circle at 50% 50%, #eef0f2, #b8bfc5 40%, #6b7076); }
 
-/* Field services offered: small horizontal image + label tiles */
+/* Field services offered: large rounded photo cards with the label over the image */
 /* flex-wrap (not grid) so a short last row stays centered */
 .fs-tile-grid{
   display:flex;
   flex-wrap: wrap;
   justify-content:center;
-  gap: 1.4rem;
-  max-width: 900px;
-  margin: 2.5rem auto 0;
+  gap: 2.4rem;
+  margin: 3.5rem auto 0;
 }
 .fs-tile{
-  flex: 0 0 calc((100% - 2.8rem) / 3);
-  display:flex;
-  align-items:center;
-  gap: 1rem;
+  flex: 0 0 calc((100% - 4.8rem) / 3);
+  position: relative;
+  height: 180px;
+  overflow: hidden;
   background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(12,43,77,0.12);
-  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border: 1px solid rgba(12,43,77,0.25);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(12,43,77,0.18);
 }
-.fs-tile .ph{ width: 72px; height: 72px; flex-shrink:0; aspect-ratio: auto; border-radius: 6px; }
-.fs-tile h3{ font-size: 0.98rem; margin:0; }
+.fs-tile .ph{ position:absolute; inset:0; width:100%; height:100%; aspect-ratio: auto; border-radius: 0; }
+.fs-tile::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(8,24,44,0.8), rgba(8,24,44,0) 60%);
+}
+.fs-tile h3{
+  position:absolute; left: 1.2rem; right: 1.2rem; bottom: 1rem;
+  z-index: 1;
+  margin:0;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+.fs-tile h3 a{ color: inherit; }
 
 /* Equipment cards: navy top band, round image, title */
 .equip-grid{
@@ -1428,7 +1439,7 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 .brand-grid li:last-child{ grid-column: 1 / -1; color: var(--navy-text); }
 
 @media (max-width: 900px){
-  .fs-tile{ flex-basis: calc((100% - 1.4rem) / 2); }
+  .fs-tile{ flex-basis: calc((100% - 2.4rem) / 2); }
   .equip-card{ flex-basis: calc((100% - 1.6rem) / 2); }
 }
 @media (max-width: 700px){
