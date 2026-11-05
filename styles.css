@@ -1280,6 +1280,8 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 
 /* Two images stacked in one media column */
 .media-stack{ display:grid; gap: 2rem; }
+/* Images spread evenly down the full height of a long text column */
+.two-col.align-top .media-spread{ align-self: stretch; align-content: space-between; }
 .col-media.media-stack .ph{ aspect-ratio: 1/1; min-height: 0; }
 
 /* Bold term + indented description list */
@@ -1310,8 +1312,6 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 .ph-st-rotor-stand{ background: linear-gradient(135deg,#e8e03a,#d8dcdf 30%,#9aa3aa 55%,#c9ced2 80%,#5a6168); }
 .ph-st-parts{ background: linear-gradient(135deg,#6b7076,#b8bfc5 40%,#d8dcdf 65%,#8b9096); }
 
-/* Images spread down the full height of a long text column */
-.two-col.align-top .media-spread{ align-self: stretch; align-content: space-between; }
 
 /* Second heading further down the same text column */
 .subsection-heading{ margin-top: 2.5rem; }
