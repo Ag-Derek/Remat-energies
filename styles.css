@@ -199,6 +199,8 @@ section.section{ padding: 4.5rem 0; }
 
 /* One image beside the text, running from the first line to the last */
 .who-row{ align-items: stretch; }
+/* Full-width (landscape) text when there is no image */
+.who-row.full-width{ grid-template-columns: 1fr; }
 .who-row .col-media{ display:flex; }
 .who-row .col-media .ph{ aspect-ratio: auto; min-height: 260px; height: 100%; border-radius: 0; }
 .who-row .col-media img.ph{ object-position: center top; }
@@ -627,6 +629,8 @@ img.ind-circle{ display:block; width: 80%; height:auto; object-fit: cover; }
 /* Intro section on cream background */
 .intro-cream{ background: var(--cream); }
 .two-col.align-top{ align-items: start; }
+/* Vertically centre an image against a taller text column */
+.two-col .col-media.media-center{ align-self: center; }
 .two-col.align-top .col-text:first-child{ display:flex; flex-direction:column; gap: 1.5rem; }
 
 /* Capabilities grid (navy section, white cards) */
