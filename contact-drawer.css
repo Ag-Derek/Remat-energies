@@ -1,0 +1,183 @@
+/* ============================================================
+   Contact drawer — slide-in form opened by any [data-contact-open]
+   or a[href="#contact"] link. Markup is injected by contact-drawer.js.
+   ============================================================ */
+
+.cd-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 29, 56, .45);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+  z-index: 2000;
+}
+
+.cd-panel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(480px, 100%);
+  background: var(--white, #fff);
+  box-shadow: -12px 0 40px rgba(8, 29, 56, .18);
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(.22, .8, .3, 1);
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.cd-open .cd-backdrop{ opacity: 1; visibility: visible; }
+.cd-open .cd-panel{ transform: translateX(0); visibility: visible; }
+body.cd-lock{ overflow: hidden; }
+
+.cd-scroll{
+  overflow-y: auto;
+  padding: 3rem 3rem 2.5rem;
+  flex: 1;
+}
+
+.cd-head{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cd-head h2{
+  font-size: 1.9rem;
+  margin: 0 0 1rem;
+  color: var(--navy-text, #123156);
+}
+.cd-close{
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #d9dee5;
+  background: #fff;
+  color: var(--navy-text, #123156);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+.cd-close:hover{ background: #f2f4f7; border-color: #c4ccd6; }
+.cd-close:focus-visible{ outline: 2px solid var(--blue-accent, #4d8fc4); outline-offset: 2px; }
+
+.cd-intro{
+  color: var(--steel, #7d97ad);
+  font-size: .95rem;
+  margin: 0 0 1.75rem;
+}
+
+.cd-field{ margin-bottom: 1.4rem; }
+.cd-field label{
+  display: block;
+  font-weight: 700;
+  font-size: .92rem;
+  color: var(--navy-text, #123156);
+  margin-bottom: .45rem;
+}
+.cd-req{ color: #e0414b; margin-left: 2px; }
+
+.cd-input,
+.cd-select,
+.cd-textarea{
+  width: 100%;
+  font: inherit;
+  font-size: .95rem;
+  color: var(--navy-text, #123156);
+  background: #f4f6f9;
+  border: 1px solid #e1e6ec;
+  border-radius: 8px;
+  padding: .8rem 1rem;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.cd-input::placeholder,
+.cd-textarea::placeholder{ color: #98a4b3; }
+.cd-input:focus,
+.cd-select:focus,
+.cd-textarea:focus{
+  outline: none;
+  background: #fff;
+  border-color: var(--blue-accent, #4d8fc4);
+  box-shadow: 0 0 0 3px rgba(77, 143, 196, .15);
+}
+.cd-textarea{ min-height: 120px; resize: vertical; }
+
+.cd-select{
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23123156' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .9rem center;
+  background-size: 14px;
+  cursor: pointer;
+}
+.cd-select:invalid{ color: #98a4b3; }
+.cd-select option{ color: var(--navy-text, #123156); }
+
+.cd-phone{
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: .6rem;
+}
+
+.cd-field.cd-has-error .cd-input,
+.cd-field.cd-has-error .cd-select,
+.cd-field.cd-has-error .cd-textarea{ border-color: #e0414b; background: #fff; }
+.cd-error{
+  display: none;
+  color: #e0414b;
+  font-size: .82rem;
+  margin-top: .35rem;
+}
+.cd-field.cd-has-error .cd-error{ display: block; }
+
+.cd-submit{
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  margin-top: .5rem;
+  padding: .95rem 1.5rem;
+  font-size: 1rem;
+}
+.cd-submit[disabled]{ opacity: .7; cursor: progress; }
+
+.cd-note{
+  font-size: .8rem;
+  color: var(--steel, #7d97ad);
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.cd-success{ display: none; text-align: center; padding-top: 3rem; }
+.cd-success-mark{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e8f5ec;
+  color: #2e7d4f;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+}
+.cd-success h3{ margin-bottom: .5rem; }
+.cd-success p{ color: var(--body-text, #45505c); }
+.cd-done .cd-form{ display: none; }
+.cd-done .cd-success{ display: block; }
+
+@media (max-width: 560px){
+  .cd-scroll{ padding: 2rem 1.25rem 2rem; }
+  .cd-head h2{ font-size: 1.55rem; }
+  .cd-phone{ grid-template-columns: 100px 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .cd-backdrop, .cd-panel{ transition: none; }
+}
